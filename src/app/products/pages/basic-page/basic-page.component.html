@@ -1,0 +1,53 @@
+<p-panel header="Pibes Básicos" class="p-1">
+    <p>Pibes incluídos en Angular - usualmente en el CommonModule</p>
+</p-panel>
+
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card header="uppercase">
+            1 - {{ nameUpper | uppercase }}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card header="lowercase">
+            2 - {{ nameLower | lowercase }}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card header="titlecase">
+            3 - {{ nameTitle | titlecase }}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-card header="Fecha">
+            <ol>
+                <li>Fecha actual</li>
+                <li>Fecha actual | date </li>
+                <li>Fecha actual | date:'short'</li>
+                <li>Fecha actual | date:'medium'</li>
+                <li>Fecha actual | date:'long'</li>
+                <li>Fecha actual | date:'MMMM'</li>
+                <li>Fecha actual | date:'MMM dd, yyyy hh:mm a'</li>
+                <li>Fecha actual | date:'MMM dd, yyyy hh:mm a':'GMT-2'</li>
+                <li>Fecha actual | date:'MMMM dd, yyyy hh:mm a':'': 'ja' </li>
+                <li>Fecha actual | date:'MMMM dd, yyyy hh:mm a':'': 'ru' </li>
+            </ol>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-card header="date">
+            <ol>
+                <li>{{ customDate }}</li>
+                <li>{{ customDate | date }}</li>
+                <li>{{ customDate | date:'short'}}</li>
+                <li>{{ customDate | date:'medium'}}</li>
+                <li>{{ customDate | date:'long'}}</li>
+                <li>{{ customDate | date:'MMMM'}}</li>
+                <li>{{ customDate | date:'MMM dd, yyyy hh:mm a' }}</li>
+                <li>{{ customDate | date:'MMM dd, yyyy hh:mm a' :'GMT-2' }}</li>
+                <li>{{ customDate | date:'MMMM dd, yyyy hh:mm a' :'':'ja' }}</li>
+                <li>{{ customDate | date:'MMMM dd, yyyy hh:mm a' :'':'ru' }}</li>
+            </ol>
+        </p-card>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<p-panel header="Pibes Numéricos" class="p-1">
+    <p>Pibes incluídos en Angular - usualmente en el CommonModule</p>
+</p-panel>
+
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card header="decimal">
+            {{ numberPipe | number :'1.2-2' }}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card header="currency">
+            {{ numberPipe | currency :'COP': 'symbol-narrow' }}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card header="percent">
+            {{ percentPipe | percent : '1.2-2'}}
+        </p-card>
+    </div>
+</div>

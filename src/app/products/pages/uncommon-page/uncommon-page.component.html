@@ -1,0 +1,55 @@
+<p-panel header="No Comunes" class="p-1">
+    <p>Pibes incluídos en Angular - usualmente en el CommonModule</p>
+</p-panel>
+
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-fieldset legend="I18nSelect Pipe" [toggleable]="true">
+            <p> Saludos, {{ name }}, es un placer {{ gender | i18nSelect : invitationMap }} a nuestro evento.</p>
+            <p-button label="Cambiar cliente" (click)="changeClient()">
+            </p-button>
+        </p-fieldset>
+    </div>
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-fieldset legend="I18nPlural Pipe" [toggleable]="true">
+            <p>
+                Actualmente {{ customers.length | i18nPlural : customersMap }}
+            </p>
+            <p-button label="Borrar cliente" (click)="deleteCustomer()"></p-button>
+        </p-fieldset>
+    </div>
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-fieldset legend="slice Pipe" [toggleable]="true">
+            <b>Arreglo de clientes original</b>
+            <pre>{{ customers }}</pre>
+            <hr>
+            <b> slice:0:4</b>
+            <pre>{{ customers | slice:0:4 }}</pre>
+            <hr>
+            <b> slice:0:-2</b>
+            <pre>{{ customers | slice:0:-2 }}</pre>
+        </p-fieldset>
+    </div>
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-fieldset legend="Json Pipe" [toggleable]="true">
+            <pre>{{ persons | json }}</pre>
+        </p-fieldset>
+    </div>
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-fieldset legend="keyValue Pipe" [toggleable]="true">
+            <ul>
+                <li *ngFor="let item of persons | keyvalue">
+                    <b>{{item.key | titlecase }} :</b> {{ item.value }}
+                </li>
+            </ul>
+        </p-fieldset>
+    </div>
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-fieldset legend="async Pipe" [toggleable]="true">
+            <pre *ngIf="!(counter | async )">En un par de segundos se inicia nuestro contador</pre>
+            <pre>{{ counter | async }}</pre>
+            <hr>
+            <pre>{{ warningCounter | async }}</pre>
+        </p-fieldset>
+    </div>
+</div>
